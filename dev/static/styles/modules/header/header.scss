@@ -1,0 +1,64 @@
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 135px;
+    padding: 48px 0 45px;
+  }
+  &__menu {
+    display: flex;
+  }
+}
+
+.nav-menu {
+  &__icon {
+    @include size(40px);
+    fill: $white;
+    margin-right: 16px;
+  }
+  &__pro {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include size(16px);
+    fill: $white;
+    opacity: 0.4;
+  }
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    span {
+      opacity: 0.5;
+    }
+    &.pro {
+      padding-right: 16px;
+    }
+    &.active {
+      span { opacity: 1; }
+    }
+    &:not(:last-child) {
+      margin-right: 64px;
+    }
+  }
+}
+
+.settings {
+  cursor: pointer;
+  &__icon {
+    @include size(40px);
+    fill: $white;
+    opacity: 0.4;
+    transition: all .3s;
+  }
+  &:hover, &:focus {
+    .settings__icon {
+      opacity: 1;
+    }
+  }
+}

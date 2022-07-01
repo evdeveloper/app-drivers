@@ -9,14 +9,21 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   height: 100%;
   font-family: $base-fonts;
+  background-color: #151616;
+  background: radial-gradient(56.56% 50% at 50% 50%, #1F2121 0%, #151616 100%);
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -53,11 +60,10 @@ button { outline: none; border: none; background-color: transparent; }
 .content { flex: 1 0 auto; }
 
 .container {
-  margin: 0 auto;
-  padding: 0 15px;
   width: 100%;
-
-
+  max-width: 1780px;
+  padding: 0 90px 0 50px;
+  margin: 0 auto;
 }
 
 //Модули

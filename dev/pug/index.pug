@@ -1,12 +1,160 @@
 extends template/main
 
 block variables
-	- var title = 'Главная страница'
-	- var pageClass = 'index-page'
+  - var title = 'Главная страница'
+  - var pageClass = 'index-page'
 
 
 
 block content
+  .container
+    .driver
+      #data-list
+      .driver__col
+        .driverCategory
+          .driverCategory__title DRIVER CATEGORIES
+          ul.driverCategory__list 
+            li.driverCategory__item.disabled
+              .driverCategory__count 0
+              +icon('processor','driverCategory__icon')
+              .driverCategory__name Performance
+            li.driverCategory__item.disabled
+              .driverCategory__count 0
+              +icon('internet','driverCategory__icon')
+              .driverCategory__name Internet
+            li.driverCategory__item.disabled
+              .driverCategory__count 0
+              +icon('multimedia','driverCategory__icon')
+              .driverCategory__name Multimedia
+            li.driverCategory__item.disabled
+              .driverCategory__count 0
+              +icon('storage','driverCategory__icon')
+              .driverCategory__name Storage
+            li.driverCategory__item.disabled
+              .driverCategory__count 0
+              +icon('battery','driverCategory__icon')
+              .driverCategory__name Battery
+            li.driverCategory__item.disabled
+              .driverCategory__count 0
+              +icon('other','driverCategory__icon')
+              .driverCategory__name Other
+      .driver__col
+        .driverDetails(data-scroll)
+          .driverDetails__top
+            img(src="static/images/img/warning.svg" alt="warning")
+            p 
+              | Drivers critically 
+              a(href="#" target="_blank") affect the performance and security of your computer
+          .driverDetails__item
+            .driverDetails__header
+              .driverDetails__logo
+                +icon('processor','driverDetails__logo_icon')
+                .driverDetails__title Performance
+                .driverDetails__date Last updated: 13 / 04 / 2017
+              .driverDetails__toggle
+                +icon('arrow-down','driverDetails__toggle_icon')
+            .collapse.collapse_show
+              .driverDetails__body
+                .driverDetails__help
+                  | A group driver malfunction leads to system 
+                  a(href="#" target="_blank") slowdowns and critical failures. 
+                form(action="/")
+                  .driverDetails__list
+                    .driverDetails__system
+                      .driverDetails__type Motherboard ASUS NJFD935-3294-20
+                      .driverDetails__current Current: 15 / 29 / 2019
+                      .driverDetails__input
+                        input(type="checkbox" name="1" id="1")
+                        label(for="1")
+                          img(src="static/images/img/check.svg" alt="check")
+                    .driverDetails__system
+                      .driverDetails__type Motherboard ASUS NJFD935-3294-20
+                      .driverDetails__current Current: 15 / 29 / 2019
+                      .driverDetails__input
+                        input(type="checkbox" name="2" id="2")
+                        label(for="2")
+                          img(src="static/images/img/check.svg" alt="check")
+                    .driverDetails__system
+                      .driverDetails__type Motherboard ASUS NJFD935-3294-20
+                      .driverDetails__current Current: 15 / 29 / 2019
+                      .driverDetails__input
+                        input(type="checkbox" name="3" id="3")
+                        label(for="3")
+                          img(src="static/images/img/check.svg" alt="check")
+                    .driverDetails__system
+                      .driverDetails__type Motherboard ASUS NJFD935-3294-20
+                      .driverDetails__current Current: 15 / 29 / 2019
+                      .driverDetails__input
+                        input(type="checkbox" name="4" id="4")
+                        label(for="4")
+                          img(src="static/images/img/check.svg" alt="check")
+          .driverDetails__item
+            .driverDetails__header
+              .driverDetails__logo
+                +icon('processor','driverDetails__logo_icon')
+                .driverDetails__title Performance
+                .driverDetails__date Last updated: 13 / 04 / 2017
+              .driverDetails__toggle 
+                +icon('arrow-down','driverDetails__toggle_icon')
+            .collapse.collapse_show
+              .driverDetails__body
+                .driverDetails__help
+                  | A group driver malfunction leads to system 
+                  a(href="#" target="_blank") slowdowns and critical failures. 
+                form(action="/")
+                  .driverDetails__list
+                    .driverDetails__system
+                      .driverDetails__type Motherboard ASUS NJFD935-3294-20
+                      .driverDetails__current Current: 15 / 29 / 2019
+                      .driverDetails__input
+                        input(type="checkbox" name="1" id="1")
+                        label(for="1")
+                          img(src="static/images/img/check.svg" alt="check")
+                    .driverDetails__system
+                      .driverDetails__type Motherboard ASUS NJFD935-3294-20
+                      .driverDetails__current Current: 15 / 29 / 2019
+                      .driverDetails__input
+                        input(type="checkbox" name="2" id="2")
+                        label(for="2")
+                          img(src="static/images/img/check.svg" alt="check")
+                    .driverDetails__system
+                      .driverDetails__type Motherboard ASUS NJFD935-3294-20
+                      .driverDetails__current Current: 15 / 29 / 2019
+                      .driverDetails__input
+                        input(type="checkbox" name="3" id="3")
+                        label(for="3")
+                          img(src="static/images/img/check.svg" alt="check")
+                    .driverDetails__system
+                      .driverDetails__type Motherboard ASUS NJFD935-3294-20
+                      .driverDetails__current Current: 15 / 29 / 2019
+                      .driverDetails__input
+                        input(type="checkbox" name="4" id="4")
+                        label(for="4")
+                          img(src="static/images/img/check.svg" alt="check")
+
+    .progress
+      .progress__inner
+        button(type="button" id="scan" class="progress__scan") Scan
+        .progress__arrow
+          img(src="static/images/img/progress-arrow.svg" alt="progress")
+          img(src="static/images/img/progress-arrow.svg" alt="progress")
+        .progress__text 
+          strong Press ‘SCAN’ 
+          | to measure how much your system needs to update the drivers
+      .speedometer
+        <svg class="speedometer__svg" xmlns="http://www.w3.org/2000/svg" height="350" width="350" viewBox="0 0 200 200"> 
+          <path class="substrate" stroke="#5C6167" d="M41 149.5a77 77 0 1 1 117.93 0"  fill="none"/>
+          <path class="meter" data-value="25" stroke="#EF4444" d="M41 149.5a77 77 0 1 1 117.93 0" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+          <path class="meter" data-value="50" stroke="#FE8541" d="M41 149.5a77 77 0 1 1 117.93 0" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+          <path class="meter" data-value="75" stroke="#F5B02A" d="M41 149.5a77 77 0 1 1 117.93 0" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+          <path class="meter" data-value="100" stroke="#68B842" d="M41 149.5a77 77 0 1 1 117.93 0" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+          <text x="50" y="160" class="number">SYSTEM DRIVER STATUS</text>
+        </svg>
+        .speedometer__arrow
+          img(src="static/images/img/indicator.svg" alt="Arrow")
+        .speedometer__status
+
+      button(type="button" id="progress-result" class="btn btn--green-shadow") SHOW RESULTS
 
 
 

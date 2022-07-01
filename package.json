@@ -37,6 +37,8 @@
     "imagemin-pngquant": "^7.0.0"
   },
   "dependencies": {
-    "normalize-scss": "^7.0.1"
+    "axios": "^0.27.2",
+    "normalize-scss": "^7.0.1",
+    "simplebar": "^5.3.8"
   }
 }

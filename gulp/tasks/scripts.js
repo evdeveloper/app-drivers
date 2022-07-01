@@ -7,13 +7,13 @@ let uglify = require('gulp-uglify'),
 
 module.exports = function () {
     $.gulp.task('libsJS:dev', () => {
-        return $.gulp.src(['.'])
+        return $.gulp.src(['node_modules/axios/dist/axios.min.js', 'node_modules/simplebar/dist/simplebar.min.js'])
             .pipe(concat('libs.min.js'))
             .pipe($.gulp.dest(scriptsPATH.ouput));
     });
 
     $.gulp.task('libsJS:build', () => {
-        return $.gulp.src(['.'])
+        return $.gulp.src(['node_modules/axios/dist/axios.min.js', 'node_modules/simplebar/dist/simplebar.min.js'])
             .pipe(concat('libs.min.js'))
             .pipe(uglify())
             .pipe($.gulp.dest(scriptsPATH.ouput));
